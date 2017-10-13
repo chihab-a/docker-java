@@ -1,8 +1,8 @@
 # docker-java
 Personal Java docker image based on Debian 9 (Stretch)
 
-# Java 8 (1.8.0_111)
-----
+# Java 8
+
 ### Pull from Docker Hub
 ```
 docker pull glob-dev/java:latest
