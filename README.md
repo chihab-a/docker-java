@@ -15,7 +15,7 @@ Oracle Java 8 Server-JRE:
 Oracle Java 9 Server-JRE:
 * `9`
 
-#### Usage
+#### Usage
 
 Example:
 
