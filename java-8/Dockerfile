@@ -16,10 +16,10 @@ RUN apt-get update \
     && echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y oracle-java8-installer oracle-java8-set-default
 
-# Clean
-RUN rm -rf /var/cache/oracle-jdk8-installer \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+# Clean up
+RUN rm -rf /var/cache/oracle-jdk8-installer /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && apt-get autoremove -y \
+    && apt-get clean
 
 # Define default command
 CMD ["java"]

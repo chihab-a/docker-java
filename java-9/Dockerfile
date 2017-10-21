@@ -16,10 +16,10 @@ RUN apt-get update \
     && echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y oracle-java9-installer oracle-java9-set-default
 
-# Clean
-RUN rm -rf /var/cache/oracle-jdk9-installer \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+# Clean up
+RUN rm -rf /var/cache/oracle-jdk9-installer /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && apt-get autoremove -y \
+    && apt-get clean
 
 # Define default command
 CMD ["java"]
