@@ -3,7 +3,7 @@ Docker Java 8
 
 #### Summary
 
-Repository name in Docker Hub: **[globdev/java](https://registry.hub.docker.com/u/williamyeh/java8/)**
+Repository name in Docker Hub: **[globdev/java](https://registry.hub.docker.com/u/globdev/java/)**
 
 This repository contains Dockerized [Java](https://www.java.com/) 1.8, published to the public [Docker Hub](https://registry.hub.docker.com/) via **automated build** mechanism.
 
